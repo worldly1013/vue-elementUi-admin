@@ -20,7 +20,7 @@ import {
 // https://github.com/nuysoft/Mock/wiki/Mock.mock()
 
 var createCompany = function(){
-  var data = ['昊楼一','昊楼二','昊楼三','昊楼四','昊楼五','昊楼六','昊楼七','昊楼八','昊楼九','昊楼十']
+  var data = ['五月一','五月二','五月三','五月四','五月五','五月六','五月七','五月八','五月九','五月十']
   var random = Math.floor(Math.random() * 10)
   return data[random] + '信息科技有限公司'
 }
@@ -32,7 +32,7 @@ var createOrganization = function(){
 
 var dataList = [{
   'id|+1': 1,
-  'account|1': ['Fenzhi1', 'Fenzhi2', 'Fenzhi3', 'Fenzhi4', 'Fenzhi5', 'Fenzhi6', 'Fenzhi7', 'Fenzhi8', 'Fenzhi9', 'Fenzhi10'],
+  'account|1': ['Zhanghao1', 'Zhanghao2', 'Zhanghao3', 'Zhanghao4', 'Zhanghao5', 'Zhanghao6', 'Zhanghao7', 'Zhanghao8', 'Zhanghao9', 'Zhanghao10'],
   'phone|1': ['13100000000', '13111111111', '13122222222'],
   'name|1': '@cname',
   'companys|1':createCompany,
