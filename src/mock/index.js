@@ -11,6 +11,7 @@ import Mock from 'mockjs'
 import './file'
 import './table'
 import './user'
+import './project'
 
 Mock.setup({
   timeout: '200-1000'

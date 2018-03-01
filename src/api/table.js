@@ -53,4 +53,3 @@ export function batch_del(data) {
     data
   })
 }
-

@@ -36,84 +36,160 @@ import saveTableComponent from 'pages/table/save'
 //bar charts
 import barChartsComponent from 'pages/charts/bar'
 
+//user list
+import userListComponent from 'pages/user/list'
+//user edit
+import userEditComponent from 'pages/user/edit'
+//user add
+import userAddComponent from 'pages/user/add'
+
+//project list
+import projectListComponent from 'pages/project/list'
+//project message
+import projectTabComponent from 'pages/project/tab'
+
 Vue.use(VueRouter)
 
 //使用AMD方式加载
 // component: resolve => require(['pages/home'], resolve),
-const routes = [{
-  path: '/404',
-  name: 'notPage',
-  component: noPageComponent
-}, {
-  path: '*',
-  redirect: '/404'
-}, {
-  path: '/user/login',
-  name: 'login',
-  component: loginComponent
-}, {
+const routes = [
+  {
+    path: '/404',
+    name: 'notPage',
+    component: noPageComponent
+  },
+  {
+    path: '*',
+    redirect: '/404'
+  },
+  {
+    path: '/user/login',
+    name: 'login',
+    component: loginComponent
+  },
+  {
   path: '/',
   redirect: '/home',
   component: viewPageComponent,
-  children: [{
-    path: '/home',
-    name: 'home',
-    component: homeComponent,
-    meta: {
-      title: "主页",
-      auth: true
-    }
-  }, {
-    path: '/table/base',
-    name: 'tableBase',
-    component: baseTableComponent,
-    meta: {
-      title: "基本表格",
-      auth: true
-    }
-  }, {
-    path: '/table/sort',
-    name: 'tableSort',
-    component: sortTableComponent,
-    meta: {
-      title: "排序表格",
-      auth: true
-    }
-  }, {
-    path: '/table/update/:id',
-    name: 'tableUpdate',
-    component: saveTableComponent,
-    meta: {
-      title: "数据修改",
-      auth: true
-    }
-  }, {
-    path: '/table/add',
-    name: 'tableAdd',
-    component: saveTableComponent,
-    meta: {
-      title: "添加数据",
-      auth: true
-    }
-  }, {
-    path: '/charts/bar',
-    name: 'chartsBar',
-    component: barChartsComponent,
-    meta: {
-      title: "柱状图表",
-      auth: true
-    }
-  }]
+  children: [
+    {
+      path: '/home',
+      name: 'home',
+      component: homeComponent,
+      meta: {
+        title: "主页",
+        auth: true
+      }
+    },
+    {
+      path: '/table/base',
+      name: 'tableBase',
+      component: baseTableComponent,
+      meta: {
+        title: "基本表格",
+        auth: true
+      }
+    },
+    {
+      path: '/table/sort',
+      name: 'tableSort',
+      component: sortTableComponent,
+      meta: {
+        title: "排序表格",
+        auth: true
+      }
+    },
+    {
+      path: '/table/update/:id',
+      name: 'tableUpdate',
+      component: saveTableComponent,
+      meta: {
+        title: "数据修改",
+        auth: true
+      }
+    },
+    {
+      path: '/table/add',
+      name: 'tableAdd',
+      component: saveTableComponent,
+      meta: {
+        title: "添加数据",
+        auth: true
+      }
+    },
+    {
+      path: '/charts/bar',
+      name: 'chartsBar',
+      component: barChartsComponent,
+      meta: {
+        title: "柱状图表",
+        auth: true
+      }
+    },
+    // 用户模块
+    {
+      path:'/config/user',
+      name:'user',
+      component:userListComponent,
+      meta:{
+        title:"用户列表",
+        auth:true
+      }
+    },
+    // 用户编辑
+    {
+      path:'/config/user/edit/:id',
+      name:'userEdit',
+      component:userEditComponent,
+      meta:{
+        title:"用户编辑",
+        auth:true
+      }
+    },
+    // 用户新增
+    {
+      path:'/config/user/add',
+      name:'userAdd',
+      component:userAddComponent,
+      meta:{
+        title:"用户新增",
+        auth:true
+      }
+    },
+    // 项目列表
+    {
+      path:'/config/project',
+      name:'project',
+      component:projectListComponent,
+      meta:{
+        title:"项目列表",
+        auth:true
+      }
+    },
+    // 项目详情
+    {
+      path:'/config/project/tab',
+      name:'projectTab',
+      component:projectTabComponent,
+      meta:{
+        title:"项目配置",
+        auth:true
+      }
+    },
+  ]
 }]
 
 const router = new VueRouter({
   routes,
   mode: 'hash', //default: hash ,history
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
     } else {
-      return {x: 0, y: 0}
+      return {
+        x: 0,
+        y: 0
+      }
     }
   }
 })

@@ -17,6 +17,7 @@ import panelTitle from 'components/panelTitle'
 import simpleImageUpload from 'components/simpleImageUpload'
 import bottomToolBar from 'components/bottomToolBar'
 import charts from 'components/charts'
+import addressLinkage from 'components/addressLinkage'
 
 export {
   leftSlide,
@@ -24,5 +25,6 @@ export {
   panelTitle,
   simpleImageUpload,
   bottomToolBar,
-  charts
+  charts,
+  addressLinkage
 }

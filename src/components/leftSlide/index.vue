@@ -45,30 +45,62 @@
     name: 'slide',
     data(){
       return {
-        nav_menu_data: [{
-          title: "主页",
-          path: "/home",
-          icon: "fa-home"
-        }, {
-          title: "表格管理",
-          path: "/table",
-          icon: "fa-table",
-          child: [{
-            title: "基本表格",
-            path: "/table/base"
-          }, {
-            title: "排序表格",
-            path: "/table/sort"
-          }]
-        }, {
-          title: "图表管理",
-          path: "/charts",
-          icon: "fa-bar-chart-o",
-          child: [{
-            title: "柱状图表",
-            path: "/charts/bar"
-          }]
-        }]
+        nav_menu_data: [
+          {
+            title: "主页",
+            path: "/home",
+            icon: "fa-home"
+          },
+          {
+            title: "表格管理",
+            path: "/table",
+            icon: "fa-table",
+            child: [
+              {
+                title: "基本表格",
+                path: "/table/base"
+              },
+              {
+                title: "排序表格",
+                path: "/table/sort"
+              }
+            ]
+          },
+          {
+            title: "图表管理",
+            path: "/charts",
+            icon: "fa-bar-chart-o",
+            child: [
+              {
+                title: "柱状图表",
+                path: "/charts/bar"
+              }
+            ]
+          },
+          {
+            title: "配置",
+            path:"/config",
+            icon:"fa-bar-chart-o",
+            child:[
+              {
+                title:"组织架构",
+                path:"/config/organization"
+              },
+              {
+                title:"费项配置",
+                path:"/config/expense"
+              },
+              {
+                title:"项目配置",
+                path:"/config/project"
+              },
+              {
+                title:"用户管理",
+                path:"/config/user"
+              }
+            ]
+          }
+        ]
       }
     }
   }

@@ -3,8 +3,10 @@ html {
 }
 
 html, body {
+  box-sizing: border-box;
   height: 100%;
   background-color: #eff0f4;
+  font-size: 14px;
 }
 
 .fl {
@@ -37,6 +39,14 @@ html, body {
 
 .block {
   display: block;
+}
+
+.inline{
+  display: inline;
+}
+
+.inline_block{
+  display: inline-block;
 }
 
 .relative {
@@ -75,4 +85,29 @@ html, body {
 .d_boxflex {
   flex: 1;
   display: block;
+}
+
+.mr_10{
+  margin-right: 10px;
+}
+
+.font_14{
+  font-size: 14px;
+}
+.color_fff{
+  color:#fff;
+}
+.color_f17b57{
+  color:#f17b57;
+}
+.hyper_click{
+  color:#4870ae;
+  cursor: pointer;
+}
+.outer_shadow{
+  box-shadow: 0 0 8px rgba(204, 213, 221, .75);
+}
+.container_hover:hover{
+  border: 1px solid #accaea;
+  box-shadow: 0 0 6px rgba(172, 202, 234, 1);
 }

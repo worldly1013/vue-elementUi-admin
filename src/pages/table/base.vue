@@ -8,6 +8,7 @@
         <el-button type="primary" icon="plus" size="small">添加数据</el-button>
       </router-link>
     </panel-title>
+
     <div class="panel-body">
       <el-table
         :data="table_data"

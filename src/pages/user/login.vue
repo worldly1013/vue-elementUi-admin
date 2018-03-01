@@ -10,11 +10,15 @@
       <div class="login-form">
         <el-form ref="form" :model="form" :rules="rules" label-width="0">
           <el-form-item prop="username" class="login-item">
-            <el-input v-model="form.username" placeholder="请输入账户名：" class="form-input" :autofocus="true"></el-input>
+            <el-input v-model="form.username" placeholder="请输入企业代码：" class="form-input" :autofocus="true"></el-input>
+          </el-form-item>
+          <el-form-item prop="account" class="login-item">
+            <el-input type="account" v-model="form.account" placeholder="请输入登录帐号：" class="form-input"></el-input>
           </el-form-item>
           <el-form-item prop="password" class="login-item">
-            <el-input type="password" v-model="form.password" placeholder="请输入账户密码：" class="form-input"></el-input>
+            <el-input type="password" v-model="form.password" placeholder="请输入登录密码：" class="form-input"></el-input>
           </el-form-item>
+
           <el-form-item class="login-item">
             <el-button size="large" icon="check" class="form-submit" @click="submit_form"></el-button>
           </el-form-item>
@@ -23,6 +27,7 @@
     </div>
   </div>
 </template>
+
 <script type="text/javascript">
   import {mapActions} from 'vuex'
   import {port_user, port_code} from 'common/port_uri'
@@ -33,11 +38,13 @@
       return {
         form: {
           username: null,
+          account:null,
           password: null
         },
         rules: {
-          username: [{required: true, message: '请输入账户名！', trigger: 'blur'}],
-          password: [{required: true, message: '请输入账户密码！', trigger: 'blur'}]
+          username: [{required: true, message: '请输入企业代码！', trigger: 'blur'}],
+          account: [{required: true, message: '请输入登录帐号！', trigger: 'blur'}],
+          password: [{required: true, message: '请输入登录密码！', trigger: 'blur'}]
         },
         //请求时的loading效果
         load_data: false
@@ -71,11 +78,27 @@
                 })
               }
             })
+
+
+          // var searchData = {
+          //   'page':1,
+          //   'limit':10,
+          //   'beginTime':'#',
+          //   'endTime':'#',
+          //   'keyWord':'#'
+          // }
+          // this.$fetch.api_user.search_list(searchData)
+          //     .then(({data}) => {
+          //       console.log(data);
+          //     })
         })
       }
     }
   }
+
+
 </script>
+
 <style lang="scss" type="text/scss" rel="stylesheet/scss">
   .login-body {
     position: absolute;

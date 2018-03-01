@@ -39,8 +39,10 @@ export default function fetch(options) {
       }
     })
     //请求处理
+    // console.log(options);
     instance(options)
       .then(({data: {code, msg, data}}) => {
+        // console.log({code, msg, data});
         //请求成功时,根据业务判断状态
         if (code === port_code.success) {
           resolve({code, msg, data})

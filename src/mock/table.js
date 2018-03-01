@@ -41,13 +41,14 @@ const data_list = [{
 
 Mock.mock(new RegExp(port_table.list), ({url}) => {
   const params = parseQueryString(url)
+  console.log(params);
   return Mock.mock({
     code: port_code.success,
     msg: '获取成功',
     data: {
       [`result|${params.length}`]: data_list,
       page: Number.parseInt(params.page),
-      'total': 200
+      'total': 30
     }
   })
 })
