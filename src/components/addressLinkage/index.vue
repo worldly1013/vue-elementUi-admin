@@ -58,16 +58,28 @@ export default {
     return {
       selectWh:this.selectWidth,
       form:{
-        pro:this.province,
-        city:this.city,
-        district:this.district
+        pro:this.provinceValue,
+        city:this.cityValue,
+        district:this.districtValue
       },
       proData:addressData,
       cityData:[],
       districtData:[]
     }
   },
-  created(){
+  watch:{
+    provinceValue(){
+      this.form.pro = this.province;
+    },
+    cityValue(){
+      this.form.city = this.city;
+    },
+    districtValue(){
+      this.form.district = this.district;
+    }
+  },
+  mounted(){
+    console.log(this.form.pro);
     if(this.form.pro !== null){
       this.proChange(this.form.pro,false)
     }
@@ -82,7 +94,6 @@ export default {
         self.form.city = null;
         self.form.district = null;
       }
-
       self.proData.forEach((item,i) => {
         if(item.label === val){
           self.cityData = item.children

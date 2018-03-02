@@ -31,6 +31,7 @@ import Plugins from 'plugins'
 import App from './App'
 //导入mock数据
 import './mock'
+import './filters'
 
 //使用element-ui
 Vue.use(ElementUI)

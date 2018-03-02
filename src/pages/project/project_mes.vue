@@ -1,6 +1,6 @@
 <template>
 <div class="panel">
-  <panel-title :title="$route.meta.title"></panel-title>
+  <panel-title title="项目信息"></panel-title>
   <div class="panel-body" v-loading="loadData" element-loading-text="拼命加载中">
     <el-row>
       <el-col :span="22">
@@ -21,7 +21,7 @@
           </el-form-item>
 
           <el-form-item label="项目所在地:" prop="area">
-            <address-linkage select-width="150px"  @change="addressLinkageChange"></address-linkage>
+            <address-linkage select-width="150px" :province="form.province" :city="form.city" :district="form.district" @change="addressLinkageChange"></address-linkage>
           </el-form-item>
 
           <el-form-item label="项目所在地:" prop="linkageAddress">
@@ -91,11 +91,14 @@ export default {
         name: null,
         legalName: null,
         companyName:null,
-        address: null,
+        province: null,
+        city:null,
+        district:null,
         zdAcreage: null,
         jzAcreage: null,
         czAcreage: null,
         fpersonName:null,
+        fpersonPhone:null,
         incomePercent:null,
         landEndDate:null,
         completeDate:null,
@@ -159,7 +162,22 @@ export default {
       district:null
     }
   },
+  created(){
+    this.getData()
+  },
   methods: {
+    getData(){
+      var id = this.$route.params.id;
+      if(id){
+        this.$fetch.api_project.project_detail({projectId:id})
+        .then(data => {
+          console.log(data);
+          this.form = data.data;
+          this.loadData = false
+        })
+        .catch(() => { this.loadData = false; })
+      }
+    },
     // 提交
     submitForm() {
       this.$refs.form.validate((valid) => {
@@ -179,7 +197,6 @@ export default {
     },
     // 三级联动所选地址
     changeAddress(val){
-      console.log(val);
       var self = this;
       val.forEach((item,index) => {
         if(index === 0){ self.pro = item }
@@ -189,7 +206,7 @@ export default {
       this.linkageAddress = '000'
     },
     addressLinkageChange(val){
-      console.log(val);
+      // console.log(val);
     }
   },
   components: {

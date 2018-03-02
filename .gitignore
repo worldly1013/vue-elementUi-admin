@@ -12,7 +12,7 @@ target/
 *.iml
 *.iws
 
-# temp ignore
+# temp ignoregi
 *.log
 *.cache
 *.diff

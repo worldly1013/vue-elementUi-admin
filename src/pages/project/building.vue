@@ -2,9 +2,7 @@
 <section>
   <div class="panel">
     <panel-title title="楼宇信息">
-      <el-button type="primary" icon="plus" size="small" round>
-        <router-link :to="{ name: 'userAdd' }" class="color_fff">新建楼宇</router-link>
-      </el-button>
+      <el-button type="primary" icon="plus" size="small" round  @click="createBuilding">新建楼宇</el-button>
     </panel-title>
 
     <div class="panel-body" v-loading="loadData" element-loading-text="拼命加载中" style="minHeight:100px;">
@@ -21,10 +19,13 @@
         </div>
         <div class="list-button">
           <div class="delete-btn" @click="deleteBuilding(index)">删除</div>
-          <router-link class="edit-btn" :to="{ name: '', params: {} }">编辑</router-link>
+          <div class="edit-btn" @click="editBuilding(index)">编辑</div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="" >
+    <building-detail :visible="isVisible" :model="editBuildingData" :title="dialogTitle" @dialogState="dialogState" @save="saveBuilding"></building-detail>
   </div>
 </section>
 </template>
@@ -33,16 +34,24 @@
 import {
   panelTitle
 } from 'components'
+import buildingDetail from './edit_building'
+import { sessionStorage } from 'common/storage'
+
+console.log(sessionStorage);
 
 export default {
   data(){
     return {
       loadData:true,
-      listData:[]
+      listData:[],
+      isVisible:false,
+      dialogTitle:'新建楼宇',
+      editBuildingData:{name:'',upperFloors:'',downFloors:''},
     }
   },
   components: {
-    panelTitle
+    panelTitle,
+    buildingDetail
   },
   created(){
     this.getData()
@@ -70,6 +79,37 @@ export default {
       .catch(() => {
         this.$message.info('已取消删除!')
       })
+    },
+    createBuilding(){
+      this.isVisible = true;
+      this.dialogTitle = '新建楼宇'
+      this.editBuildingData = {name:'',upperFloors:'',downFloors:''}
+    },
+    editBuilding(i){
+      this.dialogTitle = '编辑楼宇';
+      this.editBuildingData = {
+        'name':this.listData[i].name,
+        'upperFloors':this.listData[i].upperFloors,
+        'downFloors':this.listData[i].downFloors,
+      }
+      this.isVisible = true;
+      sessionStorage.set('project_building_index',i)
+    },
+    dialogState(val){
+      this.isVisible = val;
+    },
+    saveBuilding(data){
+      // 根据 title 编辑是新建还是编辑
+      if(this.dialogTitle === '新建楼宇'){
+        this.listData.push(data)
+      }
+      if(this.dialogTitle !== '新建楼宇'){
+         var i = sessionStorage.get('project_building_index')
+         if(i){
+           this.listData[i] = data
+           sessionStorage.remove('project_building_index')
+         }
+      }
     }
   }
 
@@ -146,6 +186,9 @@ export default {
         color:#fff;
         float: left;
         width:50%;
+        font-weight: 300;
+        text-decoration: none;
+        cursor: pointer;
       }
     }
   }

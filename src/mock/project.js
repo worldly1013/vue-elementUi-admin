@@ -17,7 +17,7 @@ Mock.mock(new RegExp(port_project.project), () => {
       'building|1-10':10,
       'name|1': ['杨贵妃·闻香阁','杨贵妃·望月亭','杨贵妃·思春落','诸葛亮·八卦阵','诸葛亮·孔明灯','诸葛亮·武侯祠'],
       'preview|1':image_url,
-      'configPhase|1':[1,2,3],
+      'configPhase|1':['1','2','3'],
       'configState|1':['FN','WF'],
       'stCount|1-100':100 ,
       'wpCount|1-100':100
@@ -25,9 +25,38 @@ Mock.mock(new RegExp(port_project.project), () => {
   })
 })
 
+// 获取项目详情
+Mock.mock(new RegExp(port_project.project_detail), ({body}) => {
+  const {projectId} = JSON.parse(body);
+  console.log(projectId);
+  if(projectId){
+    return Mock.mock({
+      code: port_code.success,
+      'data':{
+        'id|+1': 1,
+        'name|1': ['杨贵妃·闻香阁','杨贵妃·望月亭','杨贵妃·思春落','诸葛亮·八卦阵','诸葛亮·孔明灯','诸葛亮·武侯祠'],
+        'legalName|1':undefined,
+        'companyName|1':['五月一信息科技有限公司','五月二信息科技有限公司','五月三信息科技有限公司'],
+        'province|1':['河南省'],
+        'city|1':['郑州市'],
+        'district|1':['金水区'],
+        'address':'东风路**号',
+        'zdAcreage|1-1000000':1000000 ,
+        'jzAcreage|1-1000000':1000000 ,
+        'czAcreage|1-1000000':1000000 ,
+        'fpersonName|1':'@cname',
+        'fpersonPhone|1':['13100000000','13111111111','13122222222'],
+        'incomePercent|1-100':100,
+        'landEndDate|1':'@date("yyyy-MM-dd")',
+        'completeDate|1':'@date("yyyy-MM-dd")',
+        'wyProfile':'物业极好，垃圾从不倒，小区从不扫'
+      }
+    })
+  }
+})
+
 // 保存项目
 Mock.mock(new RegExp(port_project.save_project), ({body}) => {
-  console.log(body);
   const {name,companyName,address} = JSON.parse(body)
   if(name && companyName && address){
     return Mock.mock({

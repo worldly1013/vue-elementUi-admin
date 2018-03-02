@@ -1,9 +1,9 @@
 <template>
 <section>
   <div class="panel">
-    <panel-title :title="$route.meta.title">
+    <panel-title title="项目信息">
       <el-button type="primary" icon="plus" size="small" round>
-        <router-link :to="{ name: 'userAdd' }" class="color_fff">新建项目</router-link>
+        <router-link :to="{ name:'projectTab',params: {tabIndex:'0'}}" class="color_fff">新建项目</router-link>
       </el-button>
     </panel-title>
 
@@ -17,7 +17,7 @@
         </div>
         <div class="data-show">
           <!-- 如果配置在第三阶段  则显示出工位、车位和面积  第三阶段表示项目已配置完成 -->
-          <p class="to-config" v-if="item.configPhase == '3'">面积：{{item.acreage}}m²</p>
+          <p class="to-config" v-if="item.configPhase == '3'">面积：{{item.acreage | formatNum}}m²</p>
           <p class="to-config" v-if="item.configPhase == '3'">工位／{{item.wpCount}}个</p>
           <p class="to-config" v-if="item.configPhase =='3'">车位／{{item.stCount}}个</p>
 
@@ -30,9 +30,9 @@
 				</span>
         </div>
         <div class="list-button">
-          <router-link class="color_fff" :to="{ name: 'projectTab', params: {} }" v-if="item.configState == 'FN'">查看/编辑</router-link>
+          <router-link class="color_fff" :to="{ name: 'projectTab', params: {tabIndex:item.configPhase,id:item.id} }" v-if="item.configState == 'FN'">查看/编辑</router-link>
           <div class="delete-btn" v-if="item.configState !== 'FN'" @click="deleteProject(index)">删除</div>
-          <router-link class="edit-btn" :to="{ name: 'projectTab', params: {} }" v-if="item.configState !== 'FN'">编辑</router-link>
+          <router-link class="edit-btn" :to="{ name: 'projectTab', params: {tabIndex:item.configPhase,id:item.id} }" v-if="item.configState !== 'FN'">编辑</router-link>
         </div>
       </div>
     </div>

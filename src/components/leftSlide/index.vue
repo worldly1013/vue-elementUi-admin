@@ -78,7 +78,7 @@
             ]
           },
           {
-            title: "配置",
+            title: "项目实例",
             path:"/config",
             icon:"fa-bar-chart-o",
             child:[
@@ -87,17 +87,14 @@
                 path:"/config/organization"
               },
               {
-                title:"费项配置",
-                path:"/config/expense"
+                title:"用户管理",
+                path:"/config/user"
               },
               {
                 title:"项目配置",
                 path:"/config/project"
               },
-              {
-                title:"用户管理",
-                path:"/config/user"
-              }
+
             ]
           }
         ]

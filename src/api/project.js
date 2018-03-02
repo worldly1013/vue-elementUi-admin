@@ -20,6 +20,15 @@ export function project_list(data) {
  })
 }
 
+// 项目详情
+export function project_detail(data) {
+ return fetch({
+   url: port_project.project_detail,
+   method: 'get',
+   data
+ })
+}
+
 // 保存项目信息
 export function save_project(data) {
  return fetch({

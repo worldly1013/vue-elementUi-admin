@@ -7,3 +7,5 @@ export const project = "/api/get/tenant/projects"
 export const save_project = "/api/put/project"
 //项目楼宇列表
 export const project_building = "/api/get/project/buildings"
+//项目详情
+export const project_detail = "/api/get/project/project"

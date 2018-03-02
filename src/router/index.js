@@ -48,6 +48,7 @@ import projectListComponent from 'pages/project/list'
 //project message
 import projectTabComponent from 'pages/project/tab'
 
+
 Vue.use(VueRouter)
 
 //使用AMD方式加载
@@ -175,7 +176,7 @@ const routes = [
         title:"项目配置",
         auth:true
       }
-    },
+    }
   ]
 }]
 

@@ -26,6 +26,16 @@ export default new class Validate {
       callback();
     }
   }
-  //
+  // 数字类型验证
+  number(rule,value,callback){
+    if (!value) {
+      return callback(new Error('输入不能为空'));
+    }
+    if(!(typeof value === 'number')){
+      return callback(new Error('请输入数字'));
+    }else{
+      callback()
+    }
+  }
 
 }
