@@ -27,12 +27,17 @@ import homeComponent from 'pages/home'
 import noPageComponent from 'pages/error/404'
 //login
 import loginComponent from 'pages/user/login'
-//base table
-import baseTableComponent from 'pages/table/base'
+
+
 //sort table
 import sortTableComponent from 'pages/table/sort'
-//save table
-import saveTableComponent from 'pages/table/save'
+//drag table
+import dragTableComponent from 'pages/table/drag'
+//inlineEdit table
+import inlineEditTableComponent from 'pages/table/edit'
+
+
+
 //bar charts
 import barChartsComponent from 'pages/charts/bar'
 
@@ -83,15 +88,6 @@ const routes = [
       }
     },
     {
-      path: '/table/base',
-      name: 'tableBase',
-      component: baseTableComponent,
-      meta: {
-        title: "基本表格",
-        auth: true
-      }
-    },
-    {
       path: '/table/sort',
       name: 'tableSort',
       component: sortTableComponent,
@@ -101,20 +97,20 @@ const routes = [
       }
     },
     {
-      path: '/table/update/:id',
-      name: 'tableUpdate',
-      component: saveTableComponent,
+      path: '/table/drag',
+      name: 'tableDrag',
+      component: dragTableComponent,
       meta: {
-        title: "数据修改",
+        title: "拖拽表格",
         auth: true
       }
     },
     {
-      path: '/table/add',
-      name: 'tableAdd',
-      component: saveTableComponent,
+      path: '/table/inlineEdit',
+      name: 'tableDrag',
+      component: inlineEditTableComponent,
       meta: {
-        title: "添加数据",
+        title: "编辑表格",
         auth: true
       }
     },

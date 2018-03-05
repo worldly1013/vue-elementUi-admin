@@ -20,6 +20,24 @@ export function list(params) {
   })
 }
 
+//拖拽数据列表
+export function drag_list(params){
+  return fetch({
+    url:port_table.drag_list,
+    method:'get',
+    params
+  })
+}
+
+//内嵌编辑数据列表
+export function edit_list(params){
+  return fetch({
+    url:port_table.edit_list,
+    method:'get',
+    params
+  })
+}
+
 //根据id查询数据
 export function get(params) {
   return fetch({

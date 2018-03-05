@@ -143,7 +143,6 @@ export default {
     },
     add(){
       console.log(this.$router);
-
     },
     modifyValid(row){
       var self = this;

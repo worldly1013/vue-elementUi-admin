@@ -57,13 +57,17 @@
             icon: "fa-table",
             child: [
               {
-                title: "基本表格",
-                path: "/table/base"
-              },
-              {
                 title: "排序表格",
                 path: "/table/sort"
-              }
+              },
+              {
+                title: "拖拽表格",
+                path: "/table/drag"
+              },
+              {
+                title: "内嵌编辑表格",
+                path: "/table/inlineEdit"
+              },
             ]
           },
           {
