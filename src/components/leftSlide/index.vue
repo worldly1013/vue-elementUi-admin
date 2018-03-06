@@ -82,6 +82,25 @@
             ]
           },
           {
+            title: "资源管理",
+            path: "/resource",
+            icon: "fa-bar-chart-o",
+            child: [
+              {
+                title: "图片上传",
+                path: "/resource/upload"
+              },
+              {
+                title: "富文本",
+                path: "/resource/editor"
+              },
+              {
+                title: "Markdown",
+                path: "/resource/markdown"
+              },
+            ]
+          },
+          {
             title: "项目实例",
             path:"/config",
             icon:"fa-bar-chart-o",

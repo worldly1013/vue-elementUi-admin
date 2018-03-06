@@ -18,6 +18,8 @@ import simpleImageUpload from 'components/simpleImageUpload'
 import bottomToolBar from 'components/bottomToolBar'
 import charts from 'components/charts'
 import addressLinkage from 'components/addressLinkage'
+import markdown from 'components/markdown'
+
 
 export {
   leftSlide,
@@ -26,5 +28,6 @@ export {
   simpleImageUpload,
   bottomToolBar,
   charts,
-  addressLinkage
+  addressLinkage,
+  markdown
 }

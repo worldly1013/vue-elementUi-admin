@@ -1,13 +1,12 @@
 /**
- * Created by zzmhot on 2017/3/23.
+ * Created by worldly1013 on 2018/3/6.
  *
  * 状态管理器
  *
- * @author: zzmhot
- * @github: https://github.com/zzmhot
- * @email: zzmhot@163.com
- * @Date: 2017/3/23 18:24
- * @Copyright(©) 2017 by zzmhot.
+ * @author: worldly1013
+ * @email: 1184785075@qq.com
+ * @Date: 2018/3/6 15:24
+ * @Copyright(©) 2018 by worldly1013.
  *
  */
 

@@ -9,9 +9,6 @@
       </div>
       <div class="login-form">
         <el-form ref="form" :model="form" :rules="rules" label-width="0">
-          <el-form-item prop="username" class="login-item">
-            <el-input v-model="form.username" placeholder="请输入企业代码：" class="form-input" :autofocus="true"></el-input>
-          </el-form-item>
           <el-form-item prop="account" class="login-item">
             <el-input type="account" v-model="form.account" placeholder="请输入登录帐号：" class="form-input"></el-input>
           </el-form-item>
@@ -32,17 +29,16 @@
   import {mapActions} from 'vuex'
   import {port_user, port_code} from 'common/port_uri'
   import {SET_USER_INFO} from 'store/actions/type'
+  console.log(SET_USER_INFO);
 
   export default{
     data(){
       return {
         form: {
-          username: null,
           account:null,
           password: null
         },
         rules: {
-          username: [{required: true, message: '请输入企业代码！', trigger: 'blur'}],
           account: [{required: true, message: '请输入登录帐号！', trigger: 'blur'}],
           password: [{required: true, message: '请输入登录密码！', trigger: 'blur'}]
         },
@@ -67,30 +63,17 @@
                 login: true
               })
               this.$message.success(msg)
-              setTimeout(this.$router.push({path: '/'}), 500)
+              // setTimeout(this.$router.push({path: '/'}), 500)
             })
             .catch(({code}) => {
               this.load_data = false
               if (code === port_code.error) {
                 this.$notify.info({
                   title: '温馨提示',
-                  message: '账号和密码都为：admin'
+                  message: '账号为：admin,密码为：123456'
                 })
               }
             })
-
-
-          // var searchData = {
-          //   'page':1,
-          //   'limit':10,
-          //   'beginTime':'#',
-          //   'endTime':'#',
-          //   'keyWord':'#'
-          // }
-          // this.$fetch.api_user.search_list(searchData)
-          //     .then(({data}) => {
-          //       console.log(data);
-          //     })
         })
       }
     }

@@ -16,6 +16,8 @@
     "js-base64": "^2.1.9",
     "normalize.css": "^5.0.0",
     "nprogress": "^0.2.0",
+    "showdown": "^1.8.6",
+    "simplemde": "^1.11.2",
     "sortable.js": "^0.3.0",
     "sortablejs": "^1.7.0",
     "vue": "^2.3.0",

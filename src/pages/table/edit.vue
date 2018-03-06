@@ -22,7 +22,7 @@
       </el-table-column>
       <el-table-column label="操作" width="120" align="center">
         <template scope="scope">
-            <el-button v-show="!scope.row.edit" type="primary" size="small" icon="edit" @click="edit(scope.row)">编辑</el-button>
+            <el-button v-show="!scope.row.edit" type="info" size="small" icon="edit" @click="edit(scope.row)">编辑</el-button>
             <el-button v-show="scope.row.edit" type="success" size="small" icon="circle-check" @click="finishEdit(scope.row)">完成</el-button>
         </template>
       </el-table-column>

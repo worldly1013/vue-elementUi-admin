@@ -41,6 +41,13 @@ import inlineEditTableComponent from 'pages/table/edit'
 //bar charts
 import barChartsComponent from 'pages/charts/bar'
 
+//imageUpload
+import imageUploadComponent from 'pages/resource/upload'
+//editor
+import editorComponent from 'pages/resource/editor'
+//markdown
+import markdownComponent from 'pages/resource/markdown'
+
 //user list
 import userListComponent from 'pages/user/list'
 //user edit
@@ -120,6 +127,36 @@ const routes = [
       component: barChartsComponent,
       meta: {
         title: "柱状图表",
+        auth: true
+      }
+    },
+    // 图片上传
+    {
+      path: '/resource/upload',
+      name: 'imageUpload',
+      component: imageUploadComponent,
+      meta: {
+        title: "图片上传",
+        auth: true
+      }
+    },
+    // 富文本编辑器
+    {
+      path: '/resource/editor',
+      name: 'editor',
+      component: editorComponent,
+      meta: {
+        title: "富文本编辑器",
+        auth: true
+      }
+    },
+    // markdown
+    {
+      path: '/resource/markdown',
+      name: 'markdown',
+      component: markdownComponent,
+      meta: {
+        title: "markdown",
         auth: true
       }
     },

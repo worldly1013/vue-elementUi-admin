@@ -19,13 +19,13 @@ import {
 // Mock.mock(rurl,function(options))
 // https://github.com/nuysoft/Mock/wiki/Mock.mock()
 
-var createCompany = function(){
-  var data = ['五月一','五月二','五月三','五月四','五月五','五月六','五月七','五月八','五月九','五月十']
+var createCompany = function() {
+  var data = ['五月一', '五月二', '五月三', '五月四', '五月五', '五月六', '五月七', '五月八', '五月九', '五月十']
   var random = Math.floor(Math.random() * 10)
   return data[random] + '信息科技有限公司'
 }
-var createOrganization = function(){
-  var data = ['研发一','研发二','研发三','设计一','运营','产品','业务','销售','测试','设计二']
+var createOrganization = function() {
+  var data = ['研发一', '研发二', '研发三', '设计一', '运营', '产品', '业务', '销售', '测试', '设计二']
   var random = Math.floor(Math.random() * 10)
   return data[random] + '部门'
 }
@@ -35,8 +35,8 @@ var dataList = [{
   'account|1': ['Zhanghao1', 'Zhanghao2', 'Zhanghao3', 'Zhanghao4', 'Zhanghao5', 'Zhanghao6', 'Zhanghao7', 'Zhanghao8', 'Zhanghao9', 'Zhanghao10'],
   'phone|1': ['13100000000', '13111111111', '13122222222'],
   'name|1': '@cname',
-  'companys|1':createCompany,
-  'organization|1':createOrganization,
+  'companys|1': createCompany,
+  'organization|1': createOrganization,
   'valid|1': ['Y', 'N'],
   'createTime': '@date("yyyy-MM-dd")'
 }]
@@ -51,7 +51,7 @@ Mock.mock(new RegExp(port_user.login), ({
     password
   } = JSON.parse(body)
 
-  if (username === 'admin' && account === 'admin' && password === '1234567') {
+  if (account === 'admin' && password === '123456') {
     return Mock.mock({
       code: port_code.success,
       msg: "登录成功",
@@ -77,13 +77,21 @@ Mock.mock(new RegExp(port_user.logout), {
 })
 
 // 查询用户列表
-Mock.mock(new RegExp(port_user.search_list), ({body}) => {
-  const {page,limit,beginTime,endTime,keyWord} = JSON.parse(body)
+Mock.mock(new RegExp(port_user.search_list), ({
+  body
+}) => {
+  const {
+    page,
+    limit,
+    beginTime,
+    endTime,
+    keyWord
+  } = JSON.parse(body)
 
   if (page && limit) {
     return Mock.mock({
       code: port_code.success,
-      data:{
+      data: {
         [`users|${limit}`]: dataList,
         'page': page,
         'total': 300
@@ -93,43 +101,63 @@ Mock.mock(new RegExp(port_user.search_list), ({body}) => {
 })
 
 // 获取单个用户信息  id
-Mock.mock(new RegExp(port_user.mes),({body}) => {
-  const {id} = JSON.parse(body)
-  if(id){
+Mock.mock(new RegExp(port_user.mes), ({
+  body
+}) => {
+  const {
+    id
+  } = JSON.parse(body)
+  if (id) {
     return Mock.mock({
-      code:port_code.success,
-      data:{
-        'id':id,
-        'account|1':['001','002','003','004','005','006','007','008','009','010'],
-        'psd':'123456',
-        'name|1':'@cname',
-        'phone|1':['13100000000', '13111111111', '13122222222'],
-        'email|1':['11@qq.com','22@163.com']
+      code: port_code.success,
+      data: {
+        'id': id,
+        'account|1': ['001', '002', '003', '004', '005', '006', '007', '008', '009', '010'],
+        'psd': '123456',
+        'name|1': '@cname',
+        'phone|1': ['13100000000', '13111111111', '13122222222'],
+        'email|1': ['11@qq.com', '22@163.com']
       }
     })
   }
 })
 
 // 编辑用户  id
-Mock.mock(new RegExp(port_user.edit),({body}) => {
-  const {account,name,psd,phone,email} = JSON.parse(body)
-  if(account && name && psd && phone && email){
+Mock.mock(new RegExp(port_user.edit), ({
+  body
+}) => {
+  const {
+    account,
+    name,
+    psd,
+    phone,
+    email
+  } = JSON.parse(body)
+  if (account && name && psd && phone && email) {
     return Mock.mock({
-      code:port_code.success,
+      code: port_code.success,
       msg: '保存成功',
-      data:{}
+      data: {}
     })
   }
 })
 
 // 新增用户
-Mock.mock(new RegExp(port_user.add),({body}) => {
-  const {account,name,psd,phone,email} = JSON.parse(body)
-  if(account && name && psd && phone && email){
+Mock.mock(new RegExp(port_user.add), ({
+  body
+}) => {
+  const {
+    account,
+    name,
+    psd,
+    phone,
+    email
+  } = JSON.parse(body)
+  if (account && name && psd && phone && email) {
     return Mock.mock({
-      code:port_code.success,
+      code: port_code.success,
       msg: '保存成功',
-      data:{}
+      data: {}
     })
   }
 })
