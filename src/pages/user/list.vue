@@ -2,7 +2,7 @@
   <section>
     <div class="panel">
       <panel-title :title="$route.meta.title">
-        <el-button type="primary" icon="plus" size="small" round>
+        <el-button type="primary" icon="el-icon-circle-plus-outline" size="small">
           <router-link :to="{ name: 'userAdd' }" class="color_fff">新增用户</router-link>
         </el-button>
       </panel-title>
@@ -17,11 +17,11 @@
          <div class="panel-row">
            <span class="font_14">信息搜索：</span>
            <el-date-picker v-model="keyWord" type="date" placeholder="姓名／公司名／联系方式" class="search-mes-ipt"></el-date-picker>
-           <el-button size="medium" @click="search">查询</el-button>
+           <el-button size="medium" type="primary" @click="search">查询</el-button>
            <el-button size="medium" @click="reset">重置</el-button>
          </div>
 
-         <el-table :data="tableData" style="width: 100%" v-loading="loadData" element-loading-text="绝命加载中">
+         <el-table :data="tableData" :border="true" style="width: 100%" v-loading="loadData" element-loading-text="绝命加载中">
            <!-- 增加索引  设置 type 属性为 index -->
            <el-table-column type="index" label="序号" width="70" align="center"></el-table-column>
            <el-table-column prop="createTime" label="创建时间" width="120" align="center"></el-table-column>

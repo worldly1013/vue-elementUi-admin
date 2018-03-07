@@ -47,6 +47,7 @@ import imageUploadComponent from 'pages/resource/upload'
 import editorComponent from 'pages/resource/editor'
 //markdown
 import markdownComponent from 'pages/resource/markdown'
+import themeComponent from 'pages/resource/color'
 
 //user list
 import userListComponent from 'pages/user/list'
@@ -157,6 +158,16 @@ const routes = [
       component: markdownComponent,
       meta: {
         title: "markdown",
+        auth: true
+      }
+    },
+    // theme
+    {
+      path: '/resource/theme',
+      name: 'markdown',
+      component: themeComponent,
+      meta: {
+        title: "theme",
         auth: true
       }
     },

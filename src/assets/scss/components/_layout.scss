@@ -47,11 +47,12 @@
     left: inherit;
     width: 100%;
     height: 50px;
+    box-sizing: border-box;
     background-color: #fff;
     border-bottom: 1px solid #eff0f4;
     z-index: 100;
     .search {
-      margin: 6.5px 10px;
+      margin: 5px 10px;
       float: left;
       width: 220px;
       height: 35px;
@@ -107,6 +108,10 @@
         }
       }
     }
+    .theme-picker-container{
+      margin:5px 10px;
+      float: right;
+    }
   }
   .wrapper {
     padding: 15px;
@@ -158,7 +163,8 @@
   }
 }
 
-.dropdown-menu {
+
+.dropdown-menu.el-dropdown-menu {
   position: absolute;
   right: 0;
   top: 100%;

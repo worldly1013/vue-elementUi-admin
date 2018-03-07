@@ -63,7 +63,7 @@
                 login: true
               })
               this.$message.success(msg)
-              // setTimeout(this.$router.push({path: '/'}), 500)
+              setTimeout(this.$router.push({path: '/'}), 500)
             })
             .catch(({code}) => {
               this.load_data = false

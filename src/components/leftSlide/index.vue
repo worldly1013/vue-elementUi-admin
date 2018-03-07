@@ -98,6 +98,10 @@
                 title: "Markdown",
                 path: "/resource/markdown"
               },
+              {
+                title: "换肤",
+                path: "/resource/theme"
+              },
             ]
           },
           {

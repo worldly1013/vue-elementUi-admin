@@ -19,7 +19,7 @@ import bottomToolBar from 'components/bottomToolBar'
 import charts from 'components/charts'
 import addressLinkage from 'components/addressLinkage'
 import markdown from 'components/markdown'
-
+import themePicker from 'components/themePicker'
 
 export {
   leftSlide,
@@ -29,5 +29,6 @@ export {
   bottomToolBar,
   charts,
   addressLinkage,
-  markdown
+  markdown,
+  themePicker
 }

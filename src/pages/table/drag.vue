@@ -2,7 +2,7 @@
 <div class="panel">
   <panel-title :title="$route.meta.title"></panel-title>
   <div class="panel-body">
-    <el-table :data="tableData" :stripe="true" v-loading="loadData" element-loading-text="拼命加载中" style="width: 100%;">
+    <el-table :data="tableData" size="small" :border="true" :stripe="true" v-loading="loadData" element-loading-text="拼命加载中" style="width: 100%;">
       <el-table-column type="index" label="序号" width="70" align="center"></el-table-column>
       <!-- <el-table-column prop="id" label="id" width="70" align="center"> -->
       <!-- </el-table-column> -->
@@ -24,7 +24,7 @@
       </el-table-column>
       <el-table-column label="操作" width="120" align="center">
         <template scope="scope">
-            <el-button type="info" size="small" icon="setting">拖拽</el-button>
+            <el-button type="primary" size="small" icon="el-icon-rank">拖拽</el-button>
         </template>
       </el-table-column>
     </el-table>
