@@ -17,6 +17,12 @@
       <el-table-column prop="name" label="作者" width="90" align="center">
       </el-table-column>
       <el-table-column prop="important" label="重要性" width="90" align="center">
+        <template scope="scope">
+            <span class="el-icon-star-on" v-if="scope.row.important == 1 || scope.row.important == 4"></span>
+            <span class="el-icon-star-on" v-if="scope.row.important !== 1"></span>
+            <span class="el-icon-star-on" v-if="scope.row.important !== 1 && scope.row.important !== 2"></span>
+            <span class="el-icon-star-on" v-if="scope.row.important == 4"></span>
+        </template>
       </el-table-column>
       <el-table-column prop="read" label="浏览量" width="90" align="center">
       </el-table-column>
@@ -112,8 +118,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-  .el-table_1_column_7 .el-button--success{
+<style lang="scss" scoped>
+  .el-table_1_column_7 .el-button+.el-button{
     margin-left: 0px;
   }
 </style>

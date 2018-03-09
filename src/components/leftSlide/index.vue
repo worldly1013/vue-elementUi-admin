@@ -84,11 +84,15 @@
           {
             title: "资源管理",
             path: "/resource",
-            icon: "fa-bar-chart-o",
+            icon: "el-icon-document",
             child: [
               {
                 title: "图片上传",
                 path: "/resource/upload"
+              },
+              {
+                title: "Excel导出",
+                path: "/resource/excelExport"
               },
               {
                 title: "富文本",
@@ -99,15 +103,15 @@
                 path: "/resource/markdown"
               },
               {
-                title: "换肤",
-                path: "/resource/theme"
-              },
+                title: "AMap",
+                path: "/resource/amap"
+              }
             ]
           },
           {
             title: "项目实例",
             path:"/config",
-            icon:"fa-bar-chart-o",
+            icon:"el-icon-bell",
             child:[
               {
                 title:"组织架构",

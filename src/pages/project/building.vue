@@ -2,13 +2,13 @@
 <section>
   <div class="panel">
     <panel-title title="楼宇信息">
-      <el-button type="primary" icon="plus" size="small" round  @click="createBuilding">新建楼宇</el-button>
+      <el-button type="primary" icon="plus" size="small" @click="createBuilding">新建楼宇</el-button>
     </panel-title>
 
     <div class="panel-body" v-loading="loadData" element-loading-text="拼命加载中" style="minHeight:100px;">
       <div class="list-container outer_shadow container_hover" v-for="(item,index) in listData">
         <div class="picture">
-          <img :src="item.preview+'?w=226&h=171'" />
+          <img :src="item.preview+'?w=226&h=171'"/>
           <div class="mark">
             <p class="name">{{item.name}}</p>
           </div>
@@ -34,10 +34,8 @@
 import {
   panelTitle
 } from 'components'
-import buildingDetail from './edit_building'
+import buildingDetail from './building_detail'
 import { sessionStorage } from 'common/storage'
-
-console.log(sessionStorage);
 
 export default {
   data(){
@@ -61,16 +59,15 @@ export default {
       this.loadData = true;
       this.$fetch.api_project.building_list({projectId:1})
       .then(data => {
-        console.log(data);
         this.listData = data.data;
         this.loadData = false
       })
       .catch(() => { this.loadData = false; })
     },
     deleteBuilding(i){
-      console.log(i);
       this.$confirm('你确认要删除该项目吗?',{
         confirmButtonText:'确认删除',
+        type:'warning'
       })
       .then(() => {
         this.listData.splice(i,1)

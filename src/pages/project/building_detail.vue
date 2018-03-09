@@ -1,5 +1,5 @@
 <template lang="html">
-<el-dialog :title="dialogTitle" :visible.sync="dialogFormVisible" width="400px" @close="close">
+<el-dialog :title="dialogTitle" :visible.sync="dialogFormVisible" width="600px" @close="close">
   <el-row>
     <el-col :span="20">
       <el-form ref="form" :model="form" :rules="rules" label-position="left" label-width="100px">
@@ -17,8 +17,8 @@
   </el-row>
 
   <div slot="footer" class="dialog-footer">
-    <el-button @click="cancel">取 消</el-button>
-    <el-button type="primary" @click="submit">确 定</el-button>
+    <el-button @click="cancel" size="small">取 消</el-button>
+    <el-button type="primary" size="small" @click="submit">确 定</el-button>
   </div>
 </el-dialog>
 </template>

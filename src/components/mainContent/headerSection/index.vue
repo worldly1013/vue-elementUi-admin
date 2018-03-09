@@ -28,6 +28,3 @@
     }
   }
 </script>
-<style media="screen" lang="scss">
-
-</style>

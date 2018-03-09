@@ -2,7 +2,7 @@
 <section>
   <div class="panel">
     <panel-title title="项目信息">
-      <el-button type="primary" icon="plus" size="small" round>
+      <el-button type="primary" icon="el-icon-circle-plus-outline" size="small">
         <router-link :to="{ name:'projectTab',params: {tabIndex:'0'}}" class="color_fff">新建项目</router-link>
       </el-button>
     </panel-title>

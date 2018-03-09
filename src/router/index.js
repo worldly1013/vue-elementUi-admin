@@ -43,11 +43,15 @@ import barChartsComponent from 'pages/charts/bar'
 
 //imageUpload
 import imageUploadComponent from 'pages/resource/upload'
+//excelExport
+import excelExportComponent from 'pages/resource/excel_export'
 //editor
 import editorComponent from 'pages/resource/editor'
 //markdown
 import markdownComponent from 'pages/resource/markdown'
-import themeComponent from 'pages/resource/color'
+//amap
+import amapComponent from 'pages/resource/amap'
+
 
 //user list
 import userListComponent from 'pages/user/list'
@@ -163,11 +167,21 @@ const routes = [
     },
     // theme
     {
-      path: '/resource/theme',
-      name: 'markdown',
-      component: themeComponent,
+      path: '/resource/excelExport',
+      name: 'excelExport',
+      component: excelExportComponent,
       meta: {
-        title: "theme",
+        title: "Excel导出",
+        auth: true
+      }
+    },
+    // amap
+    {
+      path: '/resource/amap',
+      name: 'AMap',
+      component: amapComponent,
+      meta: {
+        title: "高德地图",
         auth: true
       }
     },
