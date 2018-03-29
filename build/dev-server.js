@@ -1,3 +1,4 @@
+// 构建本地服务器
 require('./check-versions')()
 
 var config = require('../config')

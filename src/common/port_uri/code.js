@@ -1,13 +1,13 @@
 /**
- * Created by zzmhot on 2017/3/24.
+ * Created by worldly1013 on 2018/2/04.
  *
  * 状态管理
  *
- * @author: zzmhot
- * @github: https://github.com/zzmhot
- * @email: zzmhot@163.com
- * @Date: 2017/3/24 15:21
- * @Copyright(©) 2017 by zzmhot.
+ * @author: worldly1013
+ * @github: https://github.com/worldly1013/vue-elementUi-admin
+ * @email: worldly1013@1184785075.com
+ * @Date: 2017/2/04 15:21
+ * @Copyright(©) 2017 by worldly1013.
  *
  */
 

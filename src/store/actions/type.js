@@ -1,10 +1,10 @@
 /**
  * @file: type.
  * @intro: action的类型管理.
- * @author: zzmhot.
- * @email: zzmhot@163.com.
+ * @author: worldly1013.
+ * @email: 1184785075@qq.com.
  * @Date: 2017/4/25 10:49.
- * @Copyright(©) 2017 by zzmhot.
+ * @Copyright(©) 2017 by worldly1013.
  *
  */
 

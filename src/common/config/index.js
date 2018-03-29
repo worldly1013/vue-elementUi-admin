@@ -1,10 +1,10 @@
 /**
  * @file: index.
  * @intro: 全局配置文件.
- * @author: zzmhot.
- * @email: zzmhot@163.com.
- * @Date: 2017/5/8 16:38.
- * @Copyright(©) 2017 by thinkive.
+ * @author: worldly1013.
+ * @email: 1184785075@qq.com.
+ * @Date: 2017/02/10 16:38.
+ * @Copyright(©) 2017 by worldly1013.
  *
  */
 

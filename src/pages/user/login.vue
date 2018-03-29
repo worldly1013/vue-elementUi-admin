@@ -17,7 +17,7 @@
           </el-form-item>
 
           <el-form-item class="login-item">
-            <el-button size="large" icon="check" class="form-submit" @click="submit_form"></el-button>
+            <el-button size="large" icon="check" class="form-submit" @click="submit_form">登录</el-button>
           </el-form-item>
         </el-form>
       </div>

@@ -1,3 +1,4 @@
+// 生产环境构建
 require('./check-versions')()
 
 process.env.NODE_ENV = 'production'

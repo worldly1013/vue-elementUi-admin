@@ -1,3 +1,4 @@
+// 项目一些配置变量
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
 
@@ -25,7 +26,7 @@ module.exports = {
     env: require('./dev.env'),
     port: 3000,
     //是否自动打开浏览器
-    autoOpenBrowser: false,
+    autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},

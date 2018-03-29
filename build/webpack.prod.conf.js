@@ -1,3 +1,4 @@
+// webpack 生产环境配置
 var path = require('path')
 var utils = require('./utils')
 var webpack = require('webpack')

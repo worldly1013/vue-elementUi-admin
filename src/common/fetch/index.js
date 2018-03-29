@@ -1,10 +1,10 @@
 /**
  * @file: index.
  * @intro: 数据请求统一封装.
- * @author: zzmhot.
- * @email: zzmhot@163.com.
- * @Date: 2017/5/8 14:52.
- * @Copyright(©) 2017 by zzmhot.
+ * @author: worldly1013.
+ * @email: 1184785075@qq.com.
+ * @Date: 2018/02/11 14:52.
+ * @Copyright(©) 2017 by worldly1013.
  *
  */
 

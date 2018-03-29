@@ -1,11 +1,11 @@
 /**
- * Created by liyang on 2018/2/28.
+ * Created by worldly1013 on 2018/2/28.
  *
  * @intro:  2017年省市区三级联动地址数据
- * @author: liyang
+ * @author: worldly1013
  * @email: 1184785075@qq.com
  * @Date:  2018/2/28 10:55
- * @Copyright(©) 2018 by liyang.
+ * @Copyright(©) 2018 by worldly1013.
  */
 
 export default [

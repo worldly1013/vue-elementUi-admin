@@ -1,3 +1,4 @@
+// webpack 基础环境配置
 var path = require('path')
 var utils = require('./utils')
 var config = require('../config')

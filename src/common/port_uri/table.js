@@ -1,13 +1,13 @@
-/**
- * Created by zzmhot on 2017/3/24.
- *
- * @author: zzmhot
- * @github: https://github.com/zzmhot
- * @email: zzmhot@163.com
- * @Date: 2017/3/24 16:46
- * @Copyright(©) 2017 by zzmhot.
- *
- */
+ /**
+  * Created by worldly1013 on 2018/2/5.
+  *
+  * @author: worldly1013
+  * @github: https://github.com/worldly1013/vue-elementUi-admin
+  * @email: 1184785075@qq.com
+  * @Date: 2018/2/5 15:32
+  * @Copyright(©) 2018 by worldly1013.
+  *
+  */
 
 //数据列表
 export const list = "/api/get/table/list"

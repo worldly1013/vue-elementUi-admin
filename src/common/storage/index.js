@@ -1,10 +1,10 @@
 /**
  * @file: index.
  * @intro: storage存储.
- * @author: zzmhot.
- * @email: zzmhot@163.com.
- * @Date: 2017/4/28 10:42.
- * @Copyright(©) 2017 by zzmhot.
+ * @author: worldly1013.
+ * @email: 1184785075@qq.com.
+ * @Date: 2017/2/4 10:42.
+ * @Copyright(©) 2017 by worldly1013.
  *
  */
 

@@ -1,4 +1,13 @@
-
+/**
+ * Created by worldly1013 on 2018/3/4.
+ *
+ * @author: worldly1013
+ * @github: https://github.com/worldly1013/vue-elementUi-admin
+ * @email: 1184785075@qq.com
+ * @Date: 2018/3/4 19:12
+ * @Copyright(©) 2017 by worldly1013.
+ *
+ */
 
 
 //项目列表
