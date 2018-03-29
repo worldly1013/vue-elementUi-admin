@@ -1,13 +1,13 @@
 /**
- * Created by zzmhot on 2017/3/23.
+ * Created by worldly103 on 2018/5/28.
  *
  * 路由Map
  *
- * @author: zzmhot
- * @github: https://github.com/zzmhot
- * @email: zzmhot@163.com
- * @Date: 2017/3/23 18:30
- * @Copyright(©) 2017 by zzmhot.
+ * @author: worldly103
+ * @github: https://github.com/worldly1013/vue-elementUi-admin
+ * @email: 1184785075@qq.com
+ * @Date: 2018/5/28 18:30
+ * @Copyright(©) 2018 by worldly103.
  *
  */
 
