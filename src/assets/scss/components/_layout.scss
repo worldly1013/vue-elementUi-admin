@@ -31,7 +31,7 @@
       }
       &.is-active, &:hover {
         background-color: #353f4f !important;
-        color: #65cea7;
+        color: #409EFF;
       }
     }
   }
@@ -171,7 +171,7 @@
   width: 200px;
   padding: 5px;
   border-radius: 5px;
-  background: #65cea7;
+  background: #16478c;
   .dropdown-list {
     padding: 0;
     line-height: normal;
@@ -182,7 +182,6 @@
     font-size: 13px;
     padding: 7px 10px;
     text-align: left;
-    border-radius: 3px;
     cursor: pointer;
     &:hover {
       background: #2a323f;

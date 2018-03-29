@@ -5,7 +5,7 @@
          element-loading-text="正在登陆中..."
          @keyup.enter="submit_form">
       <div class="login-title">
-        <img src="./images/login_logo.png"/>
+        <img src="./images/login_logo.jpg"/>
       </div>
       <div class="login-form">
         <el-form ref="form" :model="form" :rules="rules" label-width="0">
@@ -102,6 +102,11 @@
       .login-title {
         margin-bottom: 25px;
         text-align: center;
+        img{
+          display: inline-block;
+          width:118px;
+          height:113px;
+        }
       }
       .login-item {
         .el-input__inner {
@@ -122,11 +127,11 @@
       .form-submit {
         width: 100%;
         color: #fff;
-        border-color: #6bc5a4;
-        background: #6bc5a4;
+        border-color: #16478c;
+        background: #16478c;
         &:active, &:hover {
-          border-color: #6bc5a4;
-          background: #6bc5a4;
+          border-color: #16478c;
+          background: #16478c;
         }
       }
     }
